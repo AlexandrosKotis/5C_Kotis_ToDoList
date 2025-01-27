@@ -1,0 +1,21 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  
+  
+  /*Regola per far scopmapire oggetti HTML*/
+  .hidden{
+    display: none;
+  }
+  
+  /*Regola per far apparire oggetti HTML*/
+  .show{
+    display: block;
+  }
+  
+  /*Regola per la colorazione del backgroud CONFERMA*/
+  .confermaColor{
+    background-color: green;
+  }
