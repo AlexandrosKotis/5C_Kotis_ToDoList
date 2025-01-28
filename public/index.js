@@ -4,7 +4,7 @@ const todoInput = document.getElementById("todoInput");
 const insertButton = document.getElementById("insertButton");
 const todo = toDoList(document.getElementById("todoList"));
 
-// Carica la lista iniziale
+
 todo.load().then(() => {
     todoInput.value = "";
 });
@@ -18,7 +18,7 @@ setInterval(() => {
     });
 }, 30000);
 
-// Aggiungi un nuovo task
+
 insertButton.onclick = () => {
     const task = {
         name: todoInput.value,
