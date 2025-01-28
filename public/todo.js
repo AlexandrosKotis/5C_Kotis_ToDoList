@@ -9,7 +9,7 @@ export function toDoList(parentElement) {
                  return `<li class="list-group-item d-flex justify-content-between align-items-center">
                              <span>`+e.name+`</span>
                              <div>
-                                 <button type="button" class="complete btn btn-success confermaColor">Complete</button>
+                                 <button type="button" class="complete btn btn-success">Complete</button>
                                  <button type="button" class="delete btn btn-danger">Delete</button>
                              </div>
                          </li>`;
@@ -17,7 +17,7 @@ export function toDoList(parentElement) {
                  return `<li class="list-group-item">
                              <span>`+e.name+`</span>
                              <div>
-                                 <button type="button" class="complete btn btn-light confermaColor"> Complete</button>
+                                 <button type="button" class="complete btn btn-light"> Complete</button>
                                  <button type="button" class="delete btn btn-danger btn-sm">Delete</button>
                              </div>
                          </li>`;

@@ -19,3 +19,20 @@ html {
   .confermaColor{
     background-color: green;
   }
+
+  #todoInput{
+    width: 15rem;
+  }
+
+  .todo-container {
+    text-align: center; 
+  }
+  
+  .todo-form {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 1rem; /* Spazio tra il titolo e il form */
+  }
+  
