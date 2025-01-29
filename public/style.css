@@ -16,8 +16,8 @@ html {
   }
   
   /*Regola per la colorazione del backgroud CONFERMA*/
-  .confermaColor{
-    background-color: green;
+  .completed-task{
+    background-color: rgb(164, 240, 164);
   }
 
   #todoInput{
@@ -33,6 +33,6 @@ html {
     justify-content: center; 
     align-items: center; 
     gap: 10px; 
-    margin-top: 1rem; /* Spazio tra il titolo e il form */
+    margin-top: 1rem; 
   }
   

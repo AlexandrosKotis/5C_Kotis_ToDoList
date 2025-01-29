@@ -20,6 +20,10 @@ setInterval(() => {
 
 
 insertButton.onclick = () => {
+    const taskname = todoInput.value.trim();
+
+    if (!taskname) return;
+     
     const task = {
         name: todoInput.value,
         completed: false

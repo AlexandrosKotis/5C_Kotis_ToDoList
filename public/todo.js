@@ -6,7 +6,7 @@ export function toDoList(parentElement) {
          let html = "";
          html += todos.map((e) => {
              if (!e.completed) {
-                 return `<li class="list-group-item d-flex justify-content-between align-items-center">
+                 return `<li class="list-group-item d-flex justify-content-between align-items-center "
                              <span>`+e.name+`</span>
                              <div>
                                  <button type="button" class="complete btn btn-success">Complete</button>
@@ -14,7 +14,7 @@ export function toDoList(parentElement) {
                              </div>
                          </li>`;
              } else {
-                 return `<li class="list-group-item">
+                 return `<li class="list-group-item completed-task">
                              <span>`+e.name+`</span>
                              <div>
                                  <button type="button" class="complete btn btn-light"> Complete</button>
