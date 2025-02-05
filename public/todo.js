@@ -28,7 +28,8 @@ export function toDoList(parentElement) {
 
          document.querySelectorAll(".complete").forEach((button, index) => {
              button.onclick = () => {
-                 this.complete(todos[index]).then(() => this.load()).catch(console.error);
+                this.complete(todos[index]).then(() => this.load()).catch(console.error);
+                console.log(todos);
              };
          });
 

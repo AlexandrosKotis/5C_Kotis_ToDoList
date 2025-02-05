@@ -1,6 +1,5 @@
 const express = require("express");
 const http = require("http");
-const server = http.createServer(app);
 const bodyParser = require('body-parser');
 const path = require('path');
 const fs = require('fs');
@@ -43,7 +42,7 @@ async function insert  (todo)  {
    INSERT INTO todo (name, completed) VALUES ('$NAME', '$COMPLETED')
       `;
    let sql = template.replace("$NAME", todo.name);
-   sql = sql.replace("$COMPLETED", todo.completed);
+   sql = sql.replace("$COMPLETED", todo.completed ? 1:0);
    return await executeQuery(sql); 
 }
 
@@ -88,12 +87,12 @@ app.put("/todo/complete", async (req, res) => {
 
    try {
 
-      await(await select()).map((element) => {
+      await (await select()).map(async (element) => {
 
          if (element.id === todo.id) {
 
             element.completed = true;
-
+            await update(element);
          }
 
          return element;
@@ -119,8 +118,11 @@ app.delete("/todo/:id", async (req, res) => {
 
 })
 
-createTable();
-
-server.listen(80, () => {
-  console.log("- server running");
-});
+createTable().then(() => {
+   const server = http.createServer(app);
+ 
+   server.listen(80, () => {
+     console.log("- server running");
+   })
+ }
+ );
